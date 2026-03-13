@@ -1,9 +1,15 @@
 name: Greeter
 description: Greeter GitHub Actions
 
+inputs:
+  who-to-greet:
+    required: false
+    default: World
+    description: who to greet
+
 runs:
   using: composite
   steps:
     - name: greet
-      run: echo "Hello World"
+      run: echo "Hello ${{ inputs.who-to-greet }}!"
       shell: bash
