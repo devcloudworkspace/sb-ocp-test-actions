@@ -1,0 +1,8 @@
+name: List-Files
+
+runs:
+  using: composite
+  steps:
+    - name: List Files from the repo
+      run: ls -lrth
+      shell: bash
